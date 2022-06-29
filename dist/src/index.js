@@ -64,45 +64,49 @@ function decrDistFunc() {
     vp(0, 0, 0.5);
 }
 function pza1DerFunc() {
-    var af = 10;
-    Rota3D.initRotate(obj.w[6], obj.w[8], af * Math.PI / 180);
-    for (var i = 9; i <= 10; i++) {
+    var af = 60;
+    Rota3D.initRotate(obj.w[1], obj.w[49], af * Math.PI / 180);
+    for (var i = 1; i <= 48; i++) {
         obj.w[i] = Rota3D.rotate(obj.w[i]);
     }
     cv.setObj(obj);
     cv.paint();
 }
 function pza1IzqFunc() {
-    var af = -10;
-    Rota3D.initRotate(obj.w[6], obj.w[8], af * Math.PI / 180);
-    for (var i = 9; i <= 10; i++) {
+    var af = -30;
+    Rota3D.initRotate(obj.w[1], obj.w[49], af * Math.PI / 180);
+    for (var i = 1; i <= 48; i++) {
         obj.w[i] = Rota3D.rotate(obj.w[i]);
     }
     cv.setObj(obj);
     cv.paint();
 }
 function pza12DerFunc() {
-    var af = 10;
-    console.log(obj.w[5], obj.w[7]);
-    Rota3D.initRotate(obj.w[5], obj.w[7], af * Math.PI / 180);
-    for (var i = 11; i <= 12; i++) {
+    var af = 30;
+    console.log(obj.w[1], obj.w[24], obj.w[6]);
+    Rota3D.initRotate(obj.w[24], obj.w[84], af * Math.PI / 180);
+    for (var i = 49; i <= 84; i++) {
+        obj.w[i] = Rota3D.rotate(obj.w[i]);
+    }
+    for (var i = 49; i <= 84; i++) {
         obj.w[i] = Rota3D.rotate(obj.w[i]);
     }
     cv.setObj(obj);
     cv.paint();
 }
 function pza12IzqFunc() {
-    var af = -10;
-    console.log(obj.w[5], obj.w[7]);
-    Rota3D.initRotate(obj.w[5], obj.w[7], af * Math.PI / 180);
-    for (var i = 11; i <= 12; i++) {
+    var af = -30;
+    console.log(obj.w[1], obj.w[25]);
+    Rota3D.initRotate(obj.w[1], obj.w[24], af * Math.PI / 180);
+    for (var i = 49; i <= 84; i++) {
+        obj.w[i] = Rota3D.rotate(obj.w[i]);
+    }
+    for (var i = 49; i <= 84; i++) {
         obj.w[i] = Rota3D.rotate(obj.w[i]);
     }
     cv.setObj(obj);
     cv.paint();
 }
-cv.setObj(obj);
-cv.paint();
 document.getElementById('file-input').addEventListener('change', leerArchivo, false);
 document.getElementById('eyeDown').addEventListener('click', eyeDownFunc, false);
 document.getElementById('eyeUp').addEventListener('click', eyeUpFunc, false);
